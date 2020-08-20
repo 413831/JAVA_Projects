@@ -11,14 +11,12 @@ public class VentasTest
         Producto producto1 = new Producto("Cerveza",80);
         Producto producto2 = new Producto("Jabon en polvo",75.99);
         Producto producto3 = new Producto("Queso cremoso",120.50);
-        double totalOrden;
+        Producto producto4 = new Producto("Salsa de tomate",56.50);
 
         orden1.agregarProducto(producto1);
         orden1.agregarProducto(producto2);
         orden1.agregarProducto(producto3);
-
-        totalOrden = orden1.calcularTotal();
-        System.out.println("totalOrden = " + totalOrden);
+        orden1.agregarProducto(producto4);
 
         orden1.mostrarOrden();
     }

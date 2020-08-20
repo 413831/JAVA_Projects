@@ -63,9 +63,9 @@ public class Producto
     public String toString()
     {
         final StringBuilder sb = new StringBuilder("Producto{");
-        sb.append("idProducto=").append(idProducto);
-        sb.append(", nombre='").append(nombre).append('\'');
-        sb.append(", precio=").append(precio);
+        sb.append("idProducto= ").append(idProducto);
+        sb.append(", nombre= '").append(nombre).append('\'');
+        sb.append(", precio= $").append(precio);
         sb.append('}');
         return sb.toString();
     }

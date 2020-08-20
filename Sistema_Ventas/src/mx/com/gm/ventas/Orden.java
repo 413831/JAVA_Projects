@@ -65,6 +65,7 @@ public class Orden
     public void mostrarOrden()
     {
         System.out.println(this);
+        System.out.println("Total de la orden = $" + this.calcularTotal());
     }
 
     // Getters & Setters
@@ -92,7 +93,7 @@ public class Orden
     @Override
     public String toString()
     {
-        final StringBuilder sb = new StringBuilder("Orden= ");
+        final StringBuilder sb = new StringBuilder("Id Orden = ");
         sb.append(idOrden);
         sb.append("\n");
 
