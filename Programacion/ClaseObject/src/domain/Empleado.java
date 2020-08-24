@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Empleado
 {
     protected String nombre;
@@ -44,5 +46,30 @@ public class Empleado
         sb.append(", sueldo=").append(sueldo);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        // Se compara si son la misma referencia en memoria
+        if (this == o)
+        {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass())
+        {
+            // Se compara si el argumento es null o si las clases son distintas
+            return false;
+        }
+        Empleado empleado = (Empleado) o;
+        // Se comparan los valores de los atributos
+        return Double.compare(empleado.sueldo, sueldo) == 0 &&
+                Objects.equals(nombre, empleado.nombre);
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(nombre, sueldo);
     }
 }
