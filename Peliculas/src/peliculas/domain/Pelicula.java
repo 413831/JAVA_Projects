@@ -4,7 +4,7 @@ public class Pelicula
 {
     private String nombre;
     private int idPelicula;
-    private static int contadorPeliculas;
+    private static int contadorPeliculas = 0;
 
     public Pelicula()
     {
@@ -13,7 +13,13 @@ public class Pelicula
 
     public Pelicula(String nombre)
     {
-        super();
+        this();
+        this.nombre = nombre;
+    }
+
+    public Pelicula(String nombre, int idPelicula)
+    {
+        this.idPelicula = idPelicula;
         this.nombre = nombre;
     }
 
@@ -30,6 +36,11 @@ public class Pelicula
     public int getIdPelicula()
     {
         return this.idPelicula;
+    }
+
+    public void setIdPelicula(int idPelicula)
+    {
+        this.idPelicula = idPelicula;
     }
 
     @Override
